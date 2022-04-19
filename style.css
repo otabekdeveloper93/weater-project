@@ -1,0 +1,114 @@
+:root{
+    --bg-primary: #42C2FF;
+    --bg-night: #712B75;
+    --bg-rain: #A8AAC4;
+    --bg-could: #6BA7CC;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    background-color: var(--bg-primary);
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(252.44deg, rgba(255, 250, 250, 0.7) 0%, rgba(239, 255, 253, 0.1) 100%);
+    backdrop-filter: blur(40px);
+    border-radius: 40px;
+    color: #fff;
+    z-index: 10;
+}
+.weater-indicator{
+    position: absolute;
+    top: 25px;
+    right: 300px;
+    width: 200px;
+    height: 200px;
+    
+}
+.in-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px; 
+}
+.in-img img{
+    width: 100%;
+    height: 100%;
+}
+.d-none{
+    display: none;
+}
+.mb-1{
+    margin-bottom: 10px;
+}
+.camel-case{
+    text-transform: capitalize;
+}
+.form{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 35px;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(252.44deg, rgba(255, 250, 250, 0.7) 0%, rgba(239, 255, 253, 0.1) 100%);
+}
+.form input{
+    font-size: 16px;
+    background-color: transparent;
+    padding: 0 16px;
+    width: 260px;    
+    border: none;
+}
+.form input:active{
+    background-color: transparent;
+}
+.form input:focus{
+    background-color: transparent;
+    outline: none;
+}
+.form button{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.form button i{
+    line-height: 24px;
+    color: #777;
+    font-size: 18px;
+}
+.country-box{
+    position: absolute;
+    top: 100px;
+    left: 24px;
+    width: 300px;
+    height: 100px;
+}
+.country-box h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.additional-box{
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+}
