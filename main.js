@@ -16,7 +16,6 @@ window.addEventListener('load', ()=>{
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&units=metric&appid=33dedde6287575d237be2e1c44271762`;
         
         fetch(url).then((res) => res.json()).then((data)=>{
-            console.log(data);
             contryBox.innerHTML = `
                 <p class="mb-1">Country: ${data.sys.country}<p>
                 <h1 class="mb-1 camel-case">${data.name}</h1>
@@ -28,7 +27,6 @@ window.addEventListener('load', ()=>{
                 <p>Wind Speed: <span>${data.wind.speed} </span>km/h</p>
             `;
             let showIcon = document.querySelector('#icon-indicator');
-        
             switch (data.weather[0].main) {
                 case "Clouds":
                     showIcon.className = "bx bx-cloud";
@@ -69,13 +67,6 @@ window.addEventListener('load', ()=>{
                 moon.classList.remove('d-none');
                 rain.classList.add('d-none');
                 snow.classList.add('d-none');
-            }else{
-                showIcon.className = "bx bx-sun"
-                sunny.classList.remove('d-none');
-                moon.classList.add('d-none');
-                rain.classList.add('d-none');
-                snow.classList.add('d-none');
-                body.style.background = "var(--bg-primary)";
             }
         }).catch(err => alert("Wrong city and country name!"));  
     });
