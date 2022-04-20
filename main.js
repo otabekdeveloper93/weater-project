@@ -44,6 +44,14 @@ window.addEventListener('load', ()=>{
                     snow.classList.add('d-none');
                     body.style.background = "var(--bg-rain)";
                     break;
+                case "Thunderstorm":
+                    showIcon.className = "bx bx-cloud-rain"
+                    sunny.classList.add('d-none');
+                    moon.classList.add('d-none');
+                    rain.classList.remove('d-none');
+                    snow.classList.add('d-none');
+                    body.style.background = "var(--bg-rain)";
+                    break;
                 case "Clear": 
                     showIcon.className = "bx bx-sun"
                     sunny.classList.remove('d-none');
